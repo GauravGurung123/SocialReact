@@ -14,6 +14,8 @@ using Microsoft.OpenApi.Models;
 using Persistence;
 using Microsoft.EntityFrameworkCore;
 using MediatR;
+using Application.Activities;
+
 
 namespace API
 {
