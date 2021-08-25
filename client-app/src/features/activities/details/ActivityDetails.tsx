@@ -1,4 +1,3 @@
-import React from 'react'
 import { Button, Card, Image } from 'semantic-ui-react'
 import { Activity } from '../../../models/activity'
 interface Props {
@@ -6,7 +5,6 @@ interface Props {
   openForm: (id: string) => void
   cancelSelectActivity: () => void
 }
-
 export default function ActivityDetails({
   activity,
   cancelSelectActivity,
