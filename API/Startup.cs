@@ -29,6 +29,7 @@ namespace API
                 config.RegisterValidatorsFromAssemblyContaining<Create>(); 
             });
             services.AddAplicationServices(_config);
+            services.AddIdentityServices(_config);
 
         }
 
