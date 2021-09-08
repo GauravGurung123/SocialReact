@@ -11,9 +11,7 @@ namespace Infrastructure.Security
 {
     public class IsHostRequirement : IAuthorizationRequirement
     {
-
     }
-
     public class IsHostRequirementHandler : AuthorizationHandler<IsHostRequirement>
     {
         private readonly DataContext _dbContext;
@@ -28,7 +26,7 @@ namespace Infrastructure.Security
         {
             var userId = context.User.FindFirstValue(ClaimTypes.NameIdentifier);
         
-            if(userId==null) return Task.CompletedTask;
+            if(userId == null) return Task.CompletedTask;
 
             var activityId = Guid.Parse(_httpContextAccessor.HttpContext?.Request.RouteValues.
             SingleOrDefault(x => x.Key == "id").Value?.ToString());

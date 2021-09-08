@@ -33,7 +33,7 @@ namespace API
             {
                 config.RegisterValidatorsFromAssemblyContaining<Create>(); 
             });
-            services.AddAplicationServices(_config);
+            services.AddApplicationServices(_config);
             services.AddIdentityServices(_config);
 
         }
