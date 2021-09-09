@@ -1,14 +1,7 @@
 import { format } from 'date-fns'
 import { link } from 'fs'
 import { Link } from 'react-router-dom'
-import {
-  Button,
-  Icon,
-  Item,
-  ItemExtra,
-  Label,
-  Segment,
-} from 'semantic-ui-react'
+import { Button, Icon, Item, Label, Segment } from 'semantic-ui-react'
 import { Activity } from '../../../app/models/activity'
 import ActivityListItemAttendee from './ActivityListItemAttendee'
 
@@ -20,9 +13,22 @@ export default function ActivityListItem({ activity }: Props) {
   return (
     <Segment.Group>
       <Segment>
+        {activity.isCancelled && (
+          <Label
+            attached='top'
+            color='red'
+            content='Cancelled'
+            style={{ textAlign: 'center' }}
+          />
+        )}
         <Item.Group>
           <Item>
-            <Item.Image size='tiny' circular src='/assets/user.png' />
+            <Item.Image
+              style={{ marginBottom: 3 }}
+              size='tiny'
+              circular
+              src='/assets/user.png'
+            />
             <Item.Content>
               <Item.Header as={link} to={`/activities/${activity.id}`}>
                 {activity.title}
