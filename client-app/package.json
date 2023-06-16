@@ -16,7 +16,7 @@
     "axios": "^0.21.1",
     "date-fns": "^2.23.0",
     "formik": "^2.2.9",
-    "mobx": "^6.3.2",
+    "mobx": "^6.9.0",
     "mobx-react-lite": "^3.2.0",
     "react": "^17.0.2",
     "react-calendar": "^3.4.0",
